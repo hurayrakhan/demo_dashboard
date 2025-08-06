@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AI Dashboard | Home</title>
+        <title>Home | AI Dashboard</title>
         <meta name="description" content="AI-powered dashboard with smart tools and real-time data" />
       </Helmet>
 
