@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import { Helmet } from 'react-helmet';
 import { Fade } from 'react-awesome-reveal';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 const features = [
