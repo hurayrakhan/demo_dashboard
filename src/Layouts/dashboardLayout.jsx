@@ -100,7 +100,7 @@ const DashboardLayout = () => {
 
       {/* Main Content */}
       <div className="flex-1">
-        <header className="bg-white shadow px-6 py-4 flex justify-between items-center">
+        <header className="bg-white shadow px-6 py-3.5 flex justify-between items-center">
           <h2 className="text-xl font-semibold">Dashboard</h2>
           <div className="space-x-3">
             <button className="bg-gray-200 px-3 py-1 rounded">🔔</button>
