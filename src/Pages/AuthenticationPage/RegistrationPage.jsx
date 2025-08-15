@@ -32,7 +32,7 @@ export default function LoginPage() {
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
 
         {/* Email */}
         <div className="mb-4">
@@ -68,7 +68,7 @@ export default function LoginPage() {
           disabled={isSubmitting}
           className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
         >
-          {isSubmitting ? "Logging in..." : "Login"}
+          {isSubmitting ? "Registering..." : "Register"}
         </button>
       </form>
     </div>
