@@ -1,5 +1,5 @@
 // src/layouts/DashboardLayout.jsx
-import { Outlet, NavLink } from 'react-router';
+import { Outlet, NavLink, useNavigate } from 'react-router';
 import { useState } from 'react';
 import {
   Home, BarChart, CreditCard, Users, Megaphone, LogOut, ChevronLeft, ChevronRight, User
@@ -30,6 +30,7 @@ const navItems = [
 
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -41,8 +42,8 @@ const DashboardLayout = () => {
         <div>
           {/* Top */}
           <div className="flex items-center justify-between px-4 py-4 border-b relative">
-            <span className={`text-xl font-bold text-blue-600 transition-opacity duration-300 ${collapsed ? 'opacity-0' : 'opacity-100'}`}>
-              Dashboard
+            <span onClick={() => navigate('/')} className={`text-xl font-bold text-blue-600 transition-opacity duration-300 `}>
+              {collapsed ? "AI" : 'Dashboard'}
             </span>
             <button
               onClick={() => setCollapsed(!collapsed)}
