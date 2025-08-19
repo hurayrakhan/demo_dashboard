@@ -9,7 +9,7 @@ const schema = yup.object({
   password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
 }).required();
 
-export default function LoginPage() {
+export default function RegisterPage() {
   // 2️⃣ React Hook Form Setup
   const {
     register,
@@ -34,6 +34,19 @@ export default function LoginPage() {
       >
         <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
 
+        {/* Email */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1">Email</label>
+          <input
+            type="email"
+            {...register("email")}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
+            placeholder="Enter your email"
+          />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+          )}
+        </div>
         {/* Email */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-1">Email</label>
