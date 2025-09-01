@@ -1,12 +1,15 @@
 import { Helmet } from 'react-helmet';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { FaUserFriends } from 'react-icons/fa';
+import { FaArrowTrendUp, FaSackDollar } from 'react-icons/fa6';
+import { IoIosWarning } from 'react-icons/io';
 
 const cards = [
-  { title: 'Users', value: '1,248', icon: '👥' },
-  { title: 'Revenue', value: '$32,500', icon: '💰' },
-  { title: 'Sessions', value: '9,430', icon: '📈' },
-  { title: 'Errors', value: '12', icon: '⚠️' },
+  { title: 'Users', value: '1,248', icon: <FaUserFriends></FaUserFriends> },
+  { title: 'Revenue', value: '$32,500', icon: <FaSackDollar></FaSackDollar> },
+  { title: 'Sessions', value: '9,430', icon: <FaArrowTrendUp></FaArrowTrendUp> },
+  { title: 'Errors', value: '12', icon: <IoIosWarning></IoIosWarning> },
 ];
 
 const DashboardHome = () => {
@@ -25,11 +28,16 @@ const DashboardHome = () => {
             <motion.div
               key={idx}
               whileHover={{ scale: 1.03 }}
-              className="bg-white shadow rounded-xl p-5"
+              className="bg-white shadow rounded-xl p-5 border border-gray-300"
             >
-              <div className="text-3xl mb-2">{card.icon}</div>
-              <div className="text-sm text-gray-500">{card.title}</div>
-              <div className="text-xl font-bold">{card.value}</div>
+              <div className='flex gap-2 mb-2 items-center'>
+                <div className=" text-xl font-semibold text-gray-400">{card.icon}</div>
+                <div className="text-xl font-semibold text-gray-400">{card.title}</div>
+              </div>
+              <div className='flex gap-3'>
+                <div className="text-3xl font-bold text-green-900">{card.value}</div>
+                <div className='text-green-400 flex gap-1 items-center font-semibold'><FaArrowTrendUp></FaArrowTrendUp> <p>5%</p></div>
+              </div>
             </motion.div>
           ))}
         </div>
